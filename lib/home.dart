@@ -29,6 +29,7 @@ class _MyAppState extends State<MyApp> {
           floatingActionButton: FloatingActionButton.extended(
             onPressed: () => {
               print('pressed'),
+              /***It targets only when the button pressed */
               setState(() {
                 count++;
               })
