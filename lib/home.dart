@@ -45,7 +45,15 @@ class _MyAppState extends State<MyApp> {
             enableInteractiveSelection: false,
             enableSuggestions: false,
             keyboardType: TextInputType.emailAddress,
-            obscureText: true,
+            // obscureText: true,
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(30.0),
+                hintText: 'Your name',
+                // errorText: 'Error',
+                border: OutlineInputBorder(),
+                icon: Icon(Icons.person),
+                labelText: 'Your Name'
+                ),
           ),
         ),
         floatingActionButton: IconButton(
