@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class Mycalc extends StatefulWidget {
+  const Mycalc({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<Mycalc> createState() => _MycalcState();
 }
 
-class _MyAppState extends State<MyApp> {
-  List<int> listItem = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+class _MycalcState extends State<Mycalc> {
+   List<int> listItem = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   var count = 0;
 
   var textController;
@@ -38,24 +38,22 @@ class _MyAppState extends State<MyApp> {
             title: const Text(' New Demo'),
             backgroundColor: Colors.red,
           ),
-          body: Container(
-            child: Column(children: [
-              TextField(
-                autofocus: true,
-                controller: textController,
-                decoration: InputDecoration(hintText: 'Tabels'),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 10,
-                  itemBuilder: (BuildContext context, int index) => ListTile(
-                    title:
-                        Text('${(index + 1) * int.parse(textController.text)}'),
-                  ),
+          body: Column(children: [
+            TextField(
+              autofocus: true,
+              controller: textController,
+              decoration: InputDecoration(hintText: 'Tabels'),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (BuildContext context, int index) => ListTile(
+                  title:
+                      Text('${(index + 1) * int.parse(textController.text)}'),
                 ),
-              )
-            ]),
-          ),
+              ),
+            )
+          ]),
           floatingActionButton: IconButton(
             icon: Icon(Icons.done),
             onPressed: () {
