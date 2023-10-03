@@ -31,7 +31,16 @@ class _MyAppState extends State<MyApp> {
                     onDismissed: (direction) {
                       print(direction);
                     },
-                    
+                    background: Container(
+                      color: Colors.red,
+                      alignment: Alignment.centerRight,
+                      padding: EdgeInsets.only(right: 20.0),
+                      child: Icon(
+                        Icons.delete,
+                        color: Colors.white,
+                        size: 40.0,
+                      ),
+                    ),
                     child: Card(
                       margin: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 4.0),
